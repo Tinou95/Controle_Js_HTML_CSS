@@ -1,37 +1,37 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("charger");
-  let entrer, entrer2, date, datee, birthday, valider, envoyer, age, prenom;
-  entrer = document.querySelector("section");
-  entrer2 = document.querySelector(" p");
-  age = document.getElementById("age").value;
-  prenom = document.getElementById("prenom").value;
+  document.addEventListener("DOMContentLoaded", () => {
+  let age, prenom, paragraphe, submit,time, warning, year;
+  paragraphe = document.querySelector("section p");
+  warning = document.querySelector("section");
   footer = document.querySelector("footer p");
-  date = new Date();
-  datee = date.getFullYear();
+  time = new Date();
 
-  const Utilisateur = {
-    construct(age, prenom) {
-      this.age = age;
-      this.prenom = prenom;
-    }
+  class User {
+      constructor(prenom,age) {
+          this.prenom = document.getElementsByTagName("input")[0].value;
+          this.age = document.getElementsByTagName("input")[1].value;
+      }
+      envoie() {
 
-  };
+          return `${this.prenom} : ${this.age}`;
+      }
+      test() {
+          if (this.prenom && this.age) {
+              year = time.getFullYear() - this.age;
+              paragraphe.innerText = ` Bonjour ${this.prenom} vous êtes né en ${year} `;
+              warning.classList.remove("warning");
+              warning.classList.add("success");
+          } else {
+              paragraphe.innerText = ` Saisissez tout les champs !! `;
+              warning.classList.remove("success");
+              warning.classList.add("warning");
+          }
+      }
+  }
   submit = document.getElementsByTagName("input")[2];
-  submit.addEventListener("click", e => {
-    e.preventDefault();
-
-    let utilisateur1 = Object.create(Utilisateur);
-    utilisateur1.construct(age, prenom);
-    birthday = datee - utilisateur1.age;
-    if (!prenom && !age) {
-      entrer2.innerText = `Les champs ne sont pas remplis correctement!`;
-      entrer.classList.add("warning");
-      entrer.classList.remove("success");
-    } else {
-      entrer2.innerText = `Bonjour ${utilisateur1.prenom} vous êtes né en ${birthday}`;
-      entrer.classList.add("success");
-      entrer.classList.remove("warning");
-    }
+  submit.addEventListener("click", (e) => {
+      e.preventDefault();
+      let createUser = new User(prenom,age);
+      createUser.test();
   });
-  footer.innerText += ` -- Quentin -- ${datee}`;
+  footer.innerText += ` -- Quentin -- ${time.getFullYear()}`;
 });
