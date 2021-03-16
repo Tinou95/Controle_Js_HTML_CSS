@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,200&display=swap');
+html{
+    font-size: 62.5%;
+    
+}
+body{
+    font: 1.6rem 'Montserrat',sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background: rgb(115, 149, 201);
+
+
+}
+
+h1,h2,h3,p,ul,ol,figure{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* in this page css theme */
+:root{
+
+    --color-header: #2c3e50;
+}
+header{
+    margin-bottom: 5.0rem;
+    background-color: var(--color-header);
+}
+
+header h1{
+    color: #fff;
+    font-weight: 200;
+    text-align: center;
+    line-height: 8.0rem;
+}
+
+section, footer{
+    max-width: 80rem;
+    padding: 1.0rem;
+    border: solid 0.1rem transparent;
+    background-color: #fafafa;
+    margin: 0 auto 1rem;
+    box-shadow: 0 0 1.0rem var(--color-header);
+}
+
+footer *{
+    text-align: center;
+}
+.success{
+    text-align: center;
+    background-color: rgb(34, 34, 189);
+    color: #fff;
+    line-height: 2.5rem;
+    cursor: pointer;
+}
+.warning{
+    text-align: center;
+    line-height: 2.5rem;
+    cursor: pointer;
+    background-color: #c0392b;
+    color: #fff;
+}
+
+
+
+
+
+section p{
+    display: block;
+}
+

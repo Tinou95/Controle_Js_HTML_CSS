@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500,600');
+/*reset*/
+html{
+    font-size: 62.5%;
+}
+body{
+    font: 1.6rem 'dosis', sans-serif;
+    margin: 0;
+}
+h1{
+    margin: 0;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+    color: #222;
+    text-align: center;
+}
+*{
+    box-sizing: border-box;
+}
+header{
+    margin: 2rem 0;
+    background-color: #1c5882;
+    color: #fff;
+}
+header h1{
+    text-align: center;
+    line-height: 4rem;
+    font-size: 3rem;
+}
+header h1 > strong{
+    text-transform: uppercase;
+}
+
+main{
+    max-width: 70rem;
+    margin: 0 auto;
+}
+main section, main .form{
+    padding: 1rem;
+    border: solid .1rem #ccc;
+    background-color: #fafafa;
+}
+
+.form input, .form label{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.form input{
+    border: solid .1rem #ccc;
+    line-height: 3.5rem;
+    padding: .5rem;
+
+}
+.form input[placeholder]{
+    font-size: 1.6rem;
+}
+.form input:nth-child(5){
+    background-color: #1c5882;
+    color: #fff;
+
+}
+
+footer{
+    max-width: 80rem;
+    padding: 1.0rem;
+    border: solid 0.1rem transparent;
+    background-color: #031522;
+    color: #fff;
+    margin: 5rem auto 5rem;
+    box-shadow: 0 0 1.0rem #ec3250;
+    text-align: center;
+}
+.success{
+    text-align: center;
+    background-color: rgb(34, 34, 189);
+    color: #fff;
+    line-height: 2.5rem;
+    cursor: pointer;
+}
+.warning{
+    text-align: center;
+    line-height: 2.5rem;
+    cursor: pointer;
+    background-color: #c0392b;
+    color: #fff;
+}
